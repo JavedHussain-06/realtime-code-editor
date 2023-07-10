@@ -1,46 +1,118 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.homePageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 50vh;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.logoContainer{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.mainLogo {
+  color: #c3fad3;
+}
+
+
+.logo{
+  font-size: 40px;
+}
+
+.logoText{
+  font-size: 16px;
+  border-bottom: 3px solid #c3fad3;
+}
+
+.formWrapper {
+  background: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+.formWrapper:hover,
+.formWrapper:active,
+.formWrapper:focus {
+  box-shadow: 0 0 4px rgba(195, 250, 211, 0.5);
+}
+
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mainLable{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.inputBox{
+  padding: 10px; 
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out ;
+}
+
+.joinBtn {
+  background: #4aed88;
+  width: 100px;
+  margin-left: auto;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.joinBtn:hover {
+  background: #2b824c;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.joinBtn:focus {
+  outline: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.joinBtn:active {
+  background: #21893e;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.createInfo{
   text-align: center;
 }
-
-h1{
-  color: crimson;
+.createNewBtn {
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.createNewBtn:hover {
+  color: #368654;
+  border-color: #368654;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.createNewBtn:focus,
+.createNewBtn:active {
+  outline: none;
+  color: #2b6042;
+  border-color: #2b6042;
 }
