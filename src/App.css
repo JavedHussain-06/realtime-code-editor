@@ -63,6 +63,7 @@
   background: #eee;
   font-size: 16px;
   font-weight: bold;
+  color:#282a36;
 }
 .btn{
   border: none;
@@ -95,6 +96,7 @@
   background: #21893e;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .createInfo{
   text-align: center;
 }
