@@ -1,25 +1,48 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuid4 } from 'uuid';
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import {useNavigate} from 'react-router-dom'
+import Logo from '../components/Logo';
+
 
 const Home = () => {
 
+  const Navigate = useNavigate()
   const [roomID, setRoomId] = useState('')
   const [username , setUsername] = useState('')
-  console.log(username)
+
+
   function createNewRoom(e) {
     e.preventDefault()
     const id = uuid4()
     setRoomId(id)
+    toast.success("Created a new room")
   }
+
+  function joinRoom(){
+    if(!roomID || !username){
+      toast.error("RoomID And Username both required")
+      return
+    }
+    Navigate(`/editor/${roomID}`,{
+      state : {
+        username
+      }
+    })
+  }
+
+  function handlleInputEnter(e){
+    if(e.code === "Enter"){
+      joinRoom()
+    }
+  }
+
   return (
     <div className="homePageWrapper">
       <div className="formWrapper">
-        <div className='logoContainer'>
-          <FontAwesomeIcon className='logo mainLogo' icon={faCode} />
-          <h2 className='mainLogo logoText'>Realtime Collaboration</h2>
-        </div>
+       <Logo />
         <h4 className="mainLable">Enter Room ID</h4>
         <div className="inputGroup">
           <input
@@ -28,6 +51,7 @@ const Home = () => {
             placeholder="Room ID"
             onChange={(e)=>setRoomId(e.target.value)}
             value={roomID}
+            onKeyUp={handlleInputEnter}
           />
           <input
             type="text"
@@ -35,12 +59,13 @@ const Home = () => {
             placeholder="UserName"
             onChange={(e)=>setUsername(e.target.value)}
             value={username}
+            onKeyUp={handlleInputEnter}
           />
-          <button className="btn joinBtn">Join</button>
-          <span className="createInfo">
+          <button className="btn joinBtn" onClick={joinRoom}>Join</button>
+          <p className="createInfo">
             If you don&apos;t have a Room Id then create &nbsp;
-            <a onClick={createNewRoom} className="createNewBtn" href="#">New Room</a>
-          </span>
+            <span onClick={createNewRoom} className="createNewBtn" href="">New Room</span>
+          </p>
         </div>
       </div>
     </div>
