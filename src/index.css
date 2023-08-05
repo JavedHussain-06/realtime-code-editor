@@ -16,10 +16,9 @@
 
 body {
   margin: 0;
-  background:#191822;
+  background: #191822;
   height: 100vh;
 }
-
 
 /* @media (prefers-color-scheme: dark) {
   html {
