@@ -1,5 +1,3 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuid4 } from 'uuid';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
@@ -9,7 +7,7 @@ import Logo from '../components/Logo';
 
 const Home = () => {
 
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
   const [roomID, setRoomId] = useState('')
   const [username , setUsername] = useState('')
 
@@ -26,7 +24,7 @@ const Home = () => {
       toast.error("RoomID And Username both required")
       return
     }
-    Navigate(`/editor/${roomID}`,{
+    navigate(`/editor/${roomID}`,{
       state : {
         username
       }
