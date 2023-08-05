@@ -19,19 +19,3 @@ body {
   background: #191822;
   height: 100vh;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-  .image{
-    filter: drop-shadow( 0.1875rem 0.25rem 0 #252424)
-  }
-  .logo{
-    filter: drop-shadow(0rem 0rem 1px #d8d7d7);
-  }
-} */
