@@ -21,7 +21,6 @@ const EditorPage = () => {
   const [clients, setClients] = useState([]);
   const { roomId } = useParams();
 
-
   const handleErrors = useMemo(() => {
     return (err) => {
       console.log(`socket error ${err}`);
