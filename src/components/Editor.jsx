@@ -6,7 +6,7 @@ import "codemirror/theme/ayu-dark.css";
 import "codemirror/addon/edit/closetag";
 import "codemirror/addon/edit/closebrackets";
 import PropTypes from "prop-types";
-import Actions from "../pages/Actions.mjs";
+import Actions from "../pages/Actions.js";
 
 const Editor = ({ socketRef, roomId, onCodeChange }) => {
   const textRef = useRef(null);
@@ -28,7 +28,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
           lineNumbers: true,
         });
 
-        // Add a null check before attaching the event listener
+        // Add a null check before ttaching the event listener
         editorInstance.on("change", (instance, changes) => {
           const { origin } = changes;
           const code = instance.getValue();

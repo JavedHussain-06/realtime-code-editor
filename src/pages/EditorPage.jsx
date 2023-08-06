@@ -4,7 +4,7 @@ import Client from "../components/Client";
 import Logo from "../components/Logo";
 import Editor from "../components/Editor";
 import { initSocket } from "../socket";
-import Actions from "./Actions.mjs";
+import Actions from "./Actions.js";
 import {
   Navigate,
   useLocation,
@@ -21,7 +21,6 @@ const EditorPage = () => {
   const [clients, setClients] = useState([]);
   const { roomId } = useParams();
 
-  const backendURL = "http://localhost:5000";
 
   const handleErrors = useMemo(() => {
     return (err) => {
@@ -33,7 +32,7 @@ const EditorPage = () => {
 
   useEffect(() => {
     const init = async () => {
-      socketRef.current = await initSocket(backendURL);
+      socketRef.current = await initSocket();
       socketRef.current.on("connect_error", (err) => handleErrors(err));
       socketRef.current.on("connect_failed", (err) => handleErrors(err));
 
@@ -80,7 +79,7 @@ const EditorPage = () => {
         socketRef.current.off(Actions.DISCONNECTED);
       }
     };
-  }, [backendURL, roomId, location.state?.username, handleErrors]);
+  }, [roomId, location.state?.username, handleErrors]);
 
   if (!location.state) {
     return <Navigate to="/" />;

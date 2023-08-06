@@ -7,4 +7,4 @@ const Actions = {
     LEAVE: 'leave'
 }
 
-export default Actions
+module.exports = Actions;
