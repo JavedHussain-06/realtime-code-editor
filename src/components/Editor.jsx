@@ -75,6 +75,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 Editor.propTypes = {
   socketRef: PropTypes.object.isRequired,
   roomId: PropTypes.string.isRequired,
+  onCodeChange : PropTypes.func
 };
 
 export default Editor;
