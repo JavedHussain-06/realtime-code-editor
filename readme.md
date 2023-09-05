@@ -16,7 +16,6 @@ This project is a real-time code editor built using React, Socket.io, and CSS. I
 
 - **Syntax Highlighting**: The code editor includes syntax highlighting for various programming languages, making it easier for users to write and understand code.
 
-
 ## Installation
 
 1. Clone the repository to your local machine:
@@ -40,7 +39,13 @@ This project is a real-time code editor built using React, Socket.io, and CSS. I
 4. Start the development server:
 
    ```bash
-   npm start
+   node --experimental-modules server.js
+   ```
+
+   5. Open a new terminal window, navigate to the project directory, and run the app:
+
+   ```bash
+   npm run preview
    ```
 
 5. Open your web browser and access the application at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
