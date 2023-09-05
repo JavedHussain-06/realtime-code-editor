@@ -7,7 +7,7 @@ function  total(num,per,days){
     }
 }
 
-    total(100,1.2,365)
+    total(400,1,100)
 
     // 26 Oct 2023 ===>>>  100 days
     // 1090  ==> $600 for 60 days
