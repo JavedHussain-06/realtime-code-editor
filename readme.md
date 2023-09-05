@@ -42,7 +42,7 @@ This project is a real-time code editor built using React, Socket.io, and CSS. I
    node --experimental-modules server.js
    ```
 
-   5. Open a new terminal window, navigate to the project directory, and run the app:
+5. Open a new terminal window, navigate to the project directory, and run the app:
 
    ```bash
    npm run preview
