@@ -39,16 +39,16 @@ This project is a real-time code editor built using React, Socket.io, and CSS. I
 4. Start the development server:
 
    ```bash
-   node --experimental-modules server.js
+   npm start
    ```
 
 5. Open a new terminal window, navigate to the project directory, and run the app:
 
    ```bash
-   npm run preview
+   npm run dev:front
    ```
 
-5. Open your web browser and access the application at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+6. Open your web browser and access the application at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 ## Usage
 
